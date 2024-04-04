@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // Images
 import bgImge1 from '../assets/Homepage/bgimage1.png'
@@ -28,7 +28,9 @@ import NewsBlogsCarousel from '../Components/Carousel/NewsBlogsCarousel'
 function Home() {
   const [hovered, setHovered] = useState(false);
 
-
+useEffect(()=>{
+  document.title = 'Top Builders In Kochi | Home'
+},[])
   return (
     <>
       {/* Background images and Text stat */}
