@@ -7,7 +7,7 @@ function Layout() {
   return (
     <>
      <div className='bg-black w-full grid grid-rows-[7rem,1fr,6rem]'>
-        <div className=' w-full h-full top-0 sticky'>
+        <div className=' w-full h-full z-10 top-0 sticky'>
           <NavBar />
         </div>
         <div className='-mt-36 text-white lg:-mt-10'>

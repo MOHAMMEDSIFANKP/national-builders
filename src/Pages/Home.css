@@ -9,3 +9,45 @@
 }
 
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Apply animations to content elements */
+.content {
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.visible {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+/* Apply animations to line containers */
+.line-container {
+  margin-top: 2rem; /* Adjust as needed */
+}
+
+.line-container + .content {
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  animation-delay: 0.7s; /* Delay to start after content fade-in */
+}
+
+
+
