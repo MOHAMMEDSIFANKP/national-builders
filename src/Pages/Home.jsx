@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 // Images
 import bgImge1 from '../assets/Homepage/bgimage1.png'
@@ -7,13 +7,7 @@ import Image2 from '../assets/Awards/image2.png'
 import Image3 from '../assets/Awards/image3.png'
 import Image4 from '../assets/Awards/image4.png'
 import Image5 from '../assets/Awards/image5.png'
-import Mumbai from '../assets/Homepage/mumbai.svg'
-import Kochi from '../assets/Homepage/kochi.svg'
-import mumbaitothane from '../assets/Homepage/mumbaitothane.svg'
-import thanetokochi from '../assets/Homepage/thanetokochi.svg'
-import kochitothiruvalla from '../assets/Homepage/kochitothiruvalla.svg'
-import Thane from '../assets/Homepage/thane.svg'
-import Thiruvalla from '../assets/Homepage/thiruvalla.svg'
+
 import Round from '../assets/Homepage/round.svg'
 
 // Video
@@ -22,41 +16,21 @@ import Video1 from '../assets/video1.mp4'
 import { GoArrowUpRight } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 
+
 import './Home.css'
 import ReviewCarousel from '../Components/Carousel/ReviewCarousel'
 import NewsBlogsCarousel from '../Components/Carousel/NewsBlogsCarousel'
+import Ourpresence from '../Components/Ourpresence/Ourpresence'
 function Home() {
   const [hovered, setHovered] = useState(false);
 
-  const [isScrollingDown, setIsScrollingDown] = useState(false);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
 
-useEffect(()=>{
-  document.title = 'Top Builders In Kochi | Home'
-},[])
+  useEffect(() => {
+    document.title = 'Top Builders In Kochi | Home'
+  }, [])
 
+ 
 
-useEffect(() => {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      } else {
-        entry.target.classList.remove('visible');
-      }
-    });
-  });
-
-  // Observe each content div
-  document.querySelectorAll('.content').forEach(div => {
-    observer.observe(div);
-  });
-
-  return () => {
-    // Clean up observer
-    observer.disconnect();
-  };
-}, []);
   return (
     <>
       {/* Background images and Text stat */}
@@ -137,88 +111,7 @@ useEffect(() => {
       </div>
       {/* Awards & Recognitions also images view End */}
 
-      <div>
-        <div className='w-full content visible'>
-          <div className='flex justify-center items-center'>
-            {/* Round shape start */}
-            <div className='rounded-full border -me-8 lg:-me-0 border-gray-500 h-10 w-10 lg:h-28 lg:w-28'>
-            </div>
-            <div className='rounded-full border lg:-mt-3 -mt-1 lg:-ms-24 border-gray-500 h-10 w-10 lg:h-28 lg:w-28'>
-              {/* Round shape End */}
-            </div>
-            <p className='text-center py-10 text-6xl ps-10'>Our Presence</p>
-          </div>
-        </div>
-        {/* Bg images main div */}
-        <div className='mt-36'>
-          {/* Images and Contents */}
-          <div className='grid grid-cols-2 mx-36 gap-16 my-10 content visible '>
-            <img src={Mumbai} className='w-full h-full' alt="" />
-            <div className='grid grid-rows-[1fr,3rem]'>
-              <div className='opacity-60'>
-                <p className='text-9xl font-bold italic heding-font'>Mumbai</p>
-                <p className='text-xl w-11/12 leading-8'>Lorem ipsum dolor sit amet consectetur. Pellentesque pulvinar vitae et sed elit mattis cursus tristique at. Fringilla eu nisi amet sociis. Erat facilisi amet semper faucibus vitae nunc vitae sed. Ultrices tristique congue hac at senectus diam. Blandit eu consectetur mauris orci libero. Sit suspendisse nisl in mattis ultricies convallis diam sit enim.</p>
-              </div>
-              <div className='flex justify-end  w-11/12 items-center pt-10'>
-                <button className='bg-343894  hover:bg-white hover:text-red-500 text-xl rounded-full flex p-3'
-                  onMouseEnter={() => setHovered(true)}
-                  onMouseLeave={() => setHovered(false)}
-                >
-                  Read More {hovered ? (
-                    <GoArrowRight className={`ms-2 lg:ms-4 p-1 h-7 md:h-8 w-7 md:w-8 bg-red-500 text-white rounded-full icon-transition`} />
-                  ) : (
-                    <GoArrowUpRight className={`ms-2 lg:ms-4 p-1 h-7 md:h-8 w-7 md:w-8 bg-red-500 rounded-full icon-transition`} />
-                  )}
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class=" ms-36">
-            <img src={mumbaitothane} className='-mt-[4.1rem] -mb-[12.1rem] ' alt="" />
-          </div>
-
-          <div className='grid grid-cols-2 mx-36 gap-16 content visible'>
-            <div className='opacity-60'>
-              <p className='text-9xl font-bold italic heding-font'>Thane</p>
-              <p className='text-xl w-11/12 leading-8'>Lorem ipsum dolor sit amet consectetur. Pellentesque pulvinar vitae et sed elit mattis cursus tristique at. Fringilla eu nisi amet sociis. Erat facilisi amet semper faucibus vitae nunc vitae sed. Ultrices tristique congue hac at senectus diam. Blandit eu consectetur mauris orci libero. Sit suspendisse nisl in mattis ultricies convallis diam sit enim.</p>
-
-            </div>
-            <img src={Thane} className='w-full h-full' alt="" />
-          </div>
-
-
-          <div class=" ms-24 content visible">
-            <img src={thanetokochi} className='-mt-[1.6rem] -mb-[16rem] ' alt="" />
-          </div>
-
-          <div className='grid grid-cols-2 mx-36 gap-16 content visible'>
-            <img src={Kochi} className='w-full h-full' alt="" />
-            <div className='opacity-60'>
-              <p className='text-9xl font-bold italic heding-font'>Kochi</p>
-              <p className='text-xl w-11/12 leading-8'>Lorem ipsum dolor sit amet consectetur. Pellentesque pulvinar vitae et sed elit mattis cursus tristique at. Fringilla eu nisi amet sociis. Erat facilisi amet semper faucibus vitae nunc vitae sed. Ultrices tristique congue hac at senectus diam. Blandit eu consectetur mauris orci libero. Sit suspendisse nisl in mattis ultricies convallis diam sit enim.</p>
-            </div>
-          </div>
-
-
-          <div class="  flex justify-end me-24 content visible">
-            <img src={kochitothiruvalla} className='-mt-[2.4rem] -mb-[16rem] ' alt="" />
-          </div>
-
-          <div className='grid grid-cols-2 mx-36 gap-16 content visible'>
-            <div className='opacity-60'>
-              <p className='text-9xl font-bold italic heding-font'>Thiruvalla</p>
-              <p className='text-xl w-11/12 leading-8'>Lorem ipsum dolor sit amet consectetur. Pellentesque pulvinar vitae et sed elit mattis cursus tristique at. Fringilla eu nisi amet sociis. Erat facilisi amet semper faucibus vitae nunc vitae sed. Ultrices tristique congue hac at senectus diam. Blandit eu consectetur mauris orci libero. Sit suspendisse nisl in mattis ultricies convallis diam sit enim.</p>
-            </div>
-            <img src={Thiruvalla} className='w-full h-full' alt="" />
-          </div>
-
-
-          <div class="  h-20">
-          </div>
-          {/* Images and Contents End*/}
-        </div>
-      </div>
+      <Ourpresence/>
 
       {/* Video div start */}
       <div className='h-screen flex justify-center items-center mx-auto container'>
@@ -251,9 +144,9 @@ useEffect(() => {
             )}
           </button>
         </div>
-      <div className='ms-36'>
-      <NewsBlogsCarousel />
-      </div>
+        <div className='ms-36'>
+          <NewsBlogsCarousel />
+        </div>
       </div>
       {/* News & BlogsCarousel View End */}
     </>
