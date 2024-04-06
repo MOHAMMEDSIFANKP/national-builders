@@ -29,12 +29,12 @@ function Home() {
     document.title = 'Top Builders In Kochi | Home'
   }, [])
 
- 
+
 
   return (
     <>
       {/* Background images and Text stat */}
-      <div className='h-screen bg-cover bg-center flex justify-center items-center content visible' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(${bgImge1})` }}>
+      <div className='-mt-36 lg:-mt-10 h-screen bg-cover bg-center flex justify-center items-center content visible' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(${bgImge1})` }}>
         <p className='capitalize mx-10 lg:ms-0 text-4xl md:text-6xl -mt-28 bg-gradient-to-r from-white to-gray-600 inline-block text-transparent bg-clip-text' >Expression Of Excellent Living</p>
       </div>
       {/* Background images and Text End */}
@@ -79,7 +79,7 @@ function Home() {
           </div>
           <div className='my-auto mx-auto text-center'>
             <p className='text-6xl my-4'>135</p>
-            <p className='opacity-[0.5] text-xl'>Sold out</p>
+            <p className='opacity-[0.5] text-xl'>Project's Completed</p>
           </div>
           <div className='my-auto mx-auto text-center'>
             <p className='text-6xl my-4'>4</p>
@@ -111,15 +111,17 @@ function Home() {
       </div>
       {/* Awards & Recognitions also images view End */}
 
-      <Ourpresence/>
+      <Ourpresence />
 
       {/* Video div start */}
       <div className='h-screen flex justify-center items-center mx-auto container'>
-        <video controls className='w-full rounded-[2rem] lg:rounded-[8rem]'>
+        <video controls className='video-player'>
           <source src={Video1} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
+
+
       {/* Video div End */}
 
       {/* Review View Start */}

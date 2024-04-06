@@ -1,0 +1,48 @@
+@media (max-width: 767px) {
+    .hidden-div {
+        display: none;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .hidden-div-after-tab {
+        display: block;
+    }
+}
+
+/* Hide the div on larger screens */
+@media (min-width: 768px) {
+    .hidden-div-after-tab {
+        display: none;
+    }
+}
+
+.flex-div{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.line3{
+  margin-left: 43%;
+}
+/* CSS for screen size 1336x768 */
+/* @media (min-width: 1336px) and (max-width: 1400px) {
+    .line1 {
+      margin-top: -10rem !important;
+      margin-right: 4.5rem;
+    }
+    .line2{
+        margin-top: -12.7rem !important;
+        padding-right: -10rem !important;
+        padding-left: -20rem !important;
+        margin-bottom: -9rem !important;
+        
+    }
+    .line3{
+        margin-top: -17.5rem !important;
+        margin-left: 20rem !important;
+    }
+  }
+   */

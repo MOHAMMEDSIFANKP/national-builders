@@ -1,11 +1,10 @@
-@font-face {
-    font-family: 'Madalyn';
-    src: url('../assets//font/madelyn_3/WEB/Madelyn-Trial-Regular.woff') format('woff');
-    /* Add additional font formats (e.g., woff2, ttf, otf) if available */
-  }
+
   
 .heding-font{
-    font-family: 'madalyn';
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  
 }
 
 
@@ -49,5 +48,10 @@
   animation-delay: 0.7s; /* Delay to start after content fade-in */
 }
 
+.video-player {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 2rem; /* Adjust as needed */
+}
 
 

@@ -124,7 +124,7 @@ function NavBar() {
     <div className=" w-full h-full bg-transparent overflow-scroll  lg:overflow-hidden">
       <Navbar className="sticky border-0 bg-transparent top-0 z-10 h-max max-w-full rounded-none px-4 py-6 lg:px-8 lg:py-8">
         <div className="flex ps-16 items-center justify-between text-blue-gray-900">
-          <img src={bgImage1} className='lg:w-60' alt="" />
+          <img src={bgImage1} className='lg:w-60' alt="" onClick={()=>navigate('/')}/>
           <div className="flex items-center gap-4">
             <div className="mr-4 xl:mr-32 hidden lg:block">{navList}</div>
 
@@ -170,7 +170,7 @@ function NavBar() {
                   <MenuItem className='my-1'>Rentals</MenuItem>
                   <MenuItem className='my-1'>Testimontials</MenuItem>
                   <MenuItem className='my-1'>Blogs</MenuItem>
-                  <MenuItem className='my-1'>About</MenuItem>
+                  <MenuItem className='my-1' onClick={()=>navigate('/about')}>About</MenuItem>
                   <MenuItem className='my-1'>Contact</MenuItem>
                 </MenuList>
               </Menu>
