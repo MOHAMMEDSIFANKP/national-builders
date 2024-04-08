@@ -13,9 +13,12 @@ import {
   MenuItem,
 } from "@material-tailwind/react";
 
+import { motion } from 'framer-motion';
+
 import bgImage1 from '../assets/Logo/Logo.png'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 function NavBar() {
+
   const navigate = useNavigate()
   const [openNav, setOpenNav] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
@@ -123,9 +126,20 @@ function NavBar() {
   return (
     <div className=" w-full h-full bg-transparent overflow-scroll  lg:overflow-hidden">
       <Navbar className="sticky border-0 bg-transparent top-0 z-10 h-max max-w-full rounded-none px-4 py-6 lg:px-8 lg:py-8">
-        <div className="flex ps-16 items-center justify-between text-blue-gray-900">
-          <img src={bgImage1} className='lg:w-60' alt="" onClick={()=>navigate('/')}/>
-          <div className="flex items-center gap-4">
+        <motion.div className="flex ps-16 items-center justify-between text-blue-gray-900"
+         initial={{ opacity: 0 }}
+         animate={{ opacity: 1 }}
+         exit={{ opacity: 0 }}
+         transition={{ duration: 1 }}
+        >
+        <img 
+          src={bgImage1} 
+          className='lg:w-60' 
+          alt="" 
+          onClick={() => navigate('/')}
+         
+        />
+           <div className="flex items-center gap-4">
             <div className="mr-4 xl:mr-32 hidden lg:block">{navList}</div>
 
             <div className='lg:hidden'>
@@ -176,7 +190,7 @@ function NavBar() {
               </Menu>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* <MobileNav open={openNav}>
           {navList}
           

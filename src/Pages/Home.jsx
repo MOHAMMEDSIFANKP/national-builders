@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { motion } from 'framer-motion';
 
 // Images
 import bgImge1 from '../assets/Homepage/bgimage1.png'
@@ -9,6 +10,7 @@ import Image4 from '../assets/Awards/image4.png'
 import Image5 from '../assets/Awards/image5.png'
 
 import Round from '../assets/Homepage/round.svg'
+
 
 // Video
 import Video1 from '../assets/video1.mp4'
@@ -34,11 +36,39 @@ function Home() {
   return (
     <>
       {/* Background images and Text stat */}
-      <div className='-mt-36 lg:-mt-10 h-screen bg-cover bg-center flex justify-center items-center content visible' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(${bgImge1})` }}>
+      <motion.div className='-mt-36 lg:-mt-10 h-screen bg-cover bg-center flex justify-center items-center  ' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(${bgImge1})` }}
+        initial={{
+          opacity: 0,
+          y: 50,
+
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.5,
+            delay: 0.5,
+          },
+        }}
+      >
         <p className='capitalize mx-10 lg:ms-0 text-4xl md:text-6xl -mt-28 bg-gradient-to-r from-white to-gray-600 inline-block text-transparent bg-clip-text' >Expression Of Excellent Living</p>
-      </div>
+      </motion.div>
       {/* Background images and Text End */}
-      <div className='w-full mx-auto container grid grid-rows-[1fr,16rem] content visible'>
+      <motion.div className='w-full mx-auto container grid grid-rows-[1fr,16rem]'
+       initial={{
+        opacity: 0,
+        y: 50,
+
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+          delay: 0.5,
+        },
+      }}
+      >
         <div className='flex flex-col lg:flex-row lg:items-start pt-36 py-10 mx-4 lg:mx-0'>
           <div className='w-full lg:w-8/12 text-white text-2xl md:text-4xl lg:text-6xl mb-5 lg:mb-0 -mt-16 lg:mt-0'>
             <div className='invisible lg:visible h-0 lg:h-full'>
@@ -90,9 +120,23 @@ function Home() {
             <p className='opacity-[0.5] text-xl'>Ongoing</p>
           </div>
         </div>
-      </div>
+      </motion.div>
       {/* Awards & Recognitions also images view started */}
-      <div className='pt-20 py-56 mx-auto container content visible'>
+      <motion.div className='pt-20 py-56 mx-auto container'
+       initial={{
+        opacity: 0,
+        y: 50,
+
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+          delay: 0.5,
+        },
+      }}
+      >
         <div className='flex justify-center items-center text-center text-3xl lg:text-6xl'>
           <p><span className='text-red-500'>Awards</span> and <span style={{
             backgroundImage: 'linear-gradient(to right, white, #64748b)',
@@ -108,29 +152,57 @@ function Home() {
           <img className='mx-2 lg:mx-12 w-2/12 lg:w-auto flex justify-center items-center' src={Image3} alt="" />
           <img className='mx-2 lg:mx-12 w-2/12 lg:w-auto flex justify-center items-center' src={Image4} alt="" />
         </div>
-      </div>
+      </motion.div>
       {/* Awards & Recognitions also images view End */}
 
       <Ourpresence />
 
       {/* Video div start */}
-      <div className='h-screen flex justify-center items-center mx-auto container'>
+      <motion.div className='h-screen flex justify-center items-center mx-auto container'
+       initial={{
+        opacity: 0,
+        y: 50,
+
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+          delay: 0.5,
+        },
+      }}
+      >
         <video controls className='video-player'>
           <source src={Video1} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      </div>
+      </motion.div>
 
 
       {/* Video div End */}
 
       {/* Review View Start */}
-      <div className='h-screen'>
+      <motion.div className='h-screen'
+       initial={{
+        opacity: 0,
+        y: 50,
+
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+          delay: 0.5,
+        },
+      }}
+      >
         <ReviewCarousel />
-      </div>
+      </motion.div>
       {/* Review View End */}
       {/* News & BlogsCarousel View Start */}
-      <div className='h-screen bg-gradient-to-r from-gray-900 to-gray-600'>
+      {/* <div className='h-screen bg-gradient-to-r from-gray-900 to-gray-600'>
         <div className='flex h-2/6 justify-around items-center'>
           <div className='flex justify-center items-center gap-11'>
             <img src={Round} alt="" /><p className='text-5xl  font-thin'>New & Blogs</p>
@@ -149,7 +221,7 @@ function Home() {
         <div className='ms-36'>
           <NewsBlogsCarousel />
         </div>
-      </div>
+      </div> */}
       {/* News & BlogsCarousel View End */}
     </>
   )

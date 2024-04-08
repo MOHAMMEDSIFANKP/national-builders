@@ -7,10 +7,10 @@ function Layout() {
   return (
     <>
      <div className='bg-black w-full grid grid-rows-[rem,1fr,6rem]'>
-        <div className=' w-full h-full z-10 top-0 sticky'>
+        <div className=' w-full h-full z-20 top-0 sticky'>
           <NavBar />
         </div>
-        <div className='bg-black text-white'>
+        <div className='bg-black  text-white'>
             <Outlet/>
         </div>
         <div className='bg-black'>

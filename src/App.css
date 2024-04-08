@@ -1,0 +1,52 @@
+@media (max-width: 1023px) {
+    .hidden-div {
+        display: none;
+    }
+}
+
+
+@media (max-width: 770px) {
+    .hidden-div-after-tab {
+        display: block;
+    }
+}
+
+/* Hide the div on larger screens */
+@media (min-width: 770px) {
+    .hidden-div-after-tab {
+        display: none;
+    }
+}
+
+
+/* Fade effect  */
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  /* Apply animations to content elements */
+  .content {
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+  
+  .visible {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+  }
+  

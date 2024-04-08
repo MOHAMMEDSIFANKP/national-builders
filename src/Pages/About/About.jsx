@@ -104,8 +104,8 @@ function About() {
         <div>
           <p className='text-xl mx-5 lg:mx-0 text-justify opacity-65'>Lorem ipsum dolor sit amet consectetur. Tellus lobortis massa viverra sapien tincidunt turpis quam. Dictum elementum adipiscing nec urna id fames mauris ut mauris. Vitae luctus augue auctor nascetur tempus ullamcorper cras at. Commodo est donec purus est tempus sollicitudin. Dictum gravida duis egestas.</p>
         </div>
-        <div className='lg:flex pt-10 lg:pt-0'>
-          <Card className="mt-6 w-96 bg-gray-900 lg:me-4 hover:shadow-gray-600 hover:shadow-xl">
+        <div className='lg:flex right-auto left-auto pt-10 lg:pt-0 '>
+          <Card className="mt-6 lg:w-96 bg-gray-900 lg:me-4 hover:shadow-gray-600 hover:shadow-xl">
             <img className='w-full mt-4 px-6 pt-3 lg:pt-2 lg:px-4'
               src={Director1 || "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"}
               alt="card-image"
@@ -134,7 +134,7 @@ function About() {
               </Typography>
             </CardBody>
           </Card>
-          <Card className="mt-6 w-96 bg-gray-900 lg:me-4 hover:shadow-gray-600 hover:shadow-xl">
+          <Card className="mt-6 lg:w-96 bg-gray-900 lg:me-4 hover:shadow-gray-600 hover:shadow-xl">
           <img className='w-full mt-4 px-6 pt-3 lg:pt-2 lg:px-4'
               src={Director2 || "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"}
               alt="card-image"
@@ -163,7 +163,7 @@ function About() {
               </Typography>
             </CardBody>
           </Card>
-          <Card className="mt-6 w-96 bg-gray-900 lg:me-4 hover:shadow-gray-600 hover:shadow-xl">
+          <Card className="mt-6 lg:w-96 bg-gray-900 lg:me-4 hover:shadow-gray-600 hover:shadow-xl">
           <img className='w-full mt-4 px-6 pt-3 lg:pt-2 lg:px-4'
               src={Director3 || "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"}
               alt="card-image"
@@ -192,7 +192,7 @@ function About() {
               </Typography>
             </CardBody>
           </Card>
-          <Card className="mt-6 w-96 bg-gray-900 lg:me-4 hover:shadow-gray-600 hover:shadow-xl">
+          <Card className="mt-6 lg:w-96 bg-gray-900 lg:me-4 hover:shadow-gray-600 hover:shadow-xl">
           <img className='w-full mt-4 px-6 pt-3 lg:pt-2 lg:px-4 h-4/6'
               src={Director4 || "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"}
               alt="card-image"
