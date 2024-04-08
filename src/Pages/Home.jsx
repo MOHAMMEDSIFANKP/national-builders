@@ -202,7 +202,7 @@ function Home() {
       </motion.div>
       {/* Review View End */}
       {/* News & BlogsCarousel View Start */}
-      {/* <div className='h-screen bg-gradient-to-r from-gray-900 to-gray-600'>
+      <div className='h-screen bg-gradient-to-r from-gray-900 to-gray-600'>
         <div className='flex h-2/6 justify-around items-center'>
           <div className='flex justify-center items-center gap-11'>
             <img src={Round} alt="" /><p className='text-5xl  font-thin'>New & Blogs</p>
@@ -221,7 +221,7 @@ function Home() {
         <div className='ms-36'>
           <NewsBlogsCarousel />
         </div>
-      </div> */}
+      </div>
       {/* News & BlogsCarousel View End */}
     </>
   )
