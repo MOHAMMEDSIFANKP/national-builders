@@ -10,7 +10,7 @@ import { Card } from '@material-tailwind/react';
 function NewsBlogsCarousel() {
   return (
     <>
-    <div className='flex w-full max-w-[22rem] md:max-w-[48rem] lg:max-w-[57rem]  xl:max-w-[99rem] 3xl:max-w-[133rem]  overflow-x-auto' style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none' }}>
+    <div className='flex w-full max-w-[110rem] overflow-x-auto' style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none' }}>
             <div className='flex h-full mt-20 mx-7'>
                 <Card className='lg:w-[45rem] w-[19rem] lg:h-[27rem] bg-gray-900 lg:grid lg:grid-cols-[20rem,1fr]' style={{ borderRadius: '2rem' }}>
                     <div className='h-[10rem] lg:h-full bg-cover bg-center rounded-t-[2rem] lg:rounded-tr-none lg:rounded-s-[2rem]' style={{ backgroundImage: `url(${Building1})` }}>

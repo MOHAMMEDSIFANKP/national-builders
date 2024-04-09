@@ -67,7 +67,7 @@ function NavBar() {
       <Typography
         as="li"
         variant="small"
-        className={`p-1 ${currentPath === '/rentals' ? 'font-bold' : 'font-normal'} text-xl text-white`}
+        className={`p-1 ${currentPath === '/about' ? 'font-bold' : 'font-normal'} text-xl text-white`}
       >
         <Link to={'/about'} className="flex items-center">
           About
@@ -130,7 +130,7 @@ function NavBar() {
          initial={{ opacity: 0 }}
          animate={{ opacity: 1 }}
          exit={{ opacity: 0 }}
-         transition={{ duration: 1 }}
+         transition={{ duration: 2 }}
         >
         <img 
           src={bgImage1} 

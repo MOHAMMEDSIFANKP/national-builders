@@ -7,7 +7,6 @@ import { GoArrowRight } from "react-icons/go";
 
 import { motion, useAnimation } from 'framer-motion';
 
-import './Ourpresence.css'
 
 function Ourpresence() {
     const [hovered, setHovered] = useState(false);
@@ -19,7 +18,7 @@ function Ourpresence() {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const totalScroll = document.documentElement.scrollHeight - window.innerHeight - window.innerWidth - window.innerWidth;
-            const totalScroll2 = document.documentElement.scrollHeight - window.innerHeight + window.innerWidth;
+            const totalScroll2 = document.documentElement.scrollHeight - window.innerHeight - window.innerWidth;
             const progress = scrollTop / totalScroll;
             const progress2 = scrollTop / totalScroll2;
 
@@ -39,10 +38,10 @@ function Ourpresence() {
         if (shouldDraw) {
             svgAnimationControls.start({
                 pathLength: scrollProgress,
-                transition: { duration: 1.8 }
+                transition: { duration: 1.0 }
             });
         } else {
-            svgAnimationControls.start({ pathLength: 0 });
+            svgAnimationControls.start({ pathLength: 0});
         }
     }, [shouldDraw, scrollProgress, svgAnimationControls]);
     return (
@@ -63,7 +62,7 @@ function Ourpresence() {
                         },
                     }}
                 >
-                    <div className='w-full px-20'>
+                    <div className='w-full px-20 mb-64'>
                         <div className='flex justify-center items-center'>
                             <img src={RoundImg} className='w-20 lg:w-32' alt="" />
                             <p className='text-center py-10 text-4xl lg:text-6xl ps-5 lg:ps-10'>Our Presence</p>
@@ -72,7 +71,7 @@ function Ourpresence() {
                 </motion.div>
                 {/* Bg images main div */}
                 <div className='hidden lg:block'>
-                    <div className='grid grid-rows-4  px-20 w-full absolute mt-[16rem] gap-[9rem]'>
+                    <div className='grid grid-rows-4  px-20 w-full  -mb-[140rem] gap-[9rem]'>
                         <motion.div className='flex'
                             initial={{
                                 opacity: 0,
@@ -88,7 +87,7 @@ function Ourpresence() {
                             }}
                         >
                             <div className='w-full'></div>
-                            <div className='w-5/6'>
+                            <div className='w-5/6 '>
                                 <p className='text-9xl opacity-65 font-bold italic heding-font'>Mumbai</p>
                                 <p className='text-lg  opacity-65 text-justify leading-8'>In Mumbai, National Builders offers premium building solutions. Rent or buy, we cater to your needs and budget. With over 50 completed projects, trust us to deliver excellence. Make your dreams a reality with National Builders.</p>
 

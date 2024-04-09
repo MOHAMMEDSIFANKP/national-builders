@@ -2,33 +2,31 @@ import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion';
 
 // Images
-import bgImge1 from '../assets/Homepage/bgimage1.png'
-import Image1 from '../assets/Awards/image1.png'
-import Image2 from '../assets/Awards/image2.png'
-import Image3 from '../assets/Awards/image3.png'
-import Image4 from '../assets/Awards/image4.png'
-import Image5 from '../assets/Awards/image5.png'
+import bgImge1 from '../../assets/Homepage/bgimage1.png'
+import Image1 from '../../assets/Awards/image1.png'
+import Image2 from '../../assets/Awards/image2.png'
+import Image3 from '../../assets/Awards/image3.png'
+import Image4 from '../../assets/Awards/image4.png'
+import Image5 from '../../assets/Awards/image5.png'
 
-import Round from '../assets/Homepage/round.svg'
+import Round from '../../assets/Homepage/round.svg'
 
 
 // Video
-import Video1 from '../assets/video1.mp4'
+import Video1 from '../../assets/video1.mp4'
 
 import { GoArrowUpRight } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 
-
-import './Home.css'
-import ReviewCarousel from '../Components/Carousel/ReviewCarousel'
-import NewsBlogsCarousel from '../Components/Carousel/NewsBlogsCarousel'
-import Ourpresence from '../Components/Ourpresence/Ourpresence'
+import ReviewCarousel from '../../Components/Carousel/ReviewCarousel'
+import NewsBlogsCarousel from '../../Components/Carousel/NewsBlogsCarousel'
+import Ourpresence from '../../Components/Ourpresence/Ourpresence'
 function Home() {
   const [hovered, setHovered] = useState(false);
 
 
   useEffect(() => {
-    document.title = 'Top Builders In Kochi | Home'
+    document.title = 'Home | Top Builders In Kochi'
   }, [])
 
 
@@ -158,7 +156,7 @@ function Home() {
       <Ourpresence />
 
       {/* Video div start */}
-      <motion.div className='h-screen flex justify-center items-center mx-auto container'
+      <motion.div className='h-screen mx-auto container mt-64 '
        initial={{
         opacity: 0,
         y: 50,
@@ -173,10 +171,12 @@ function Home() {
         },
       }}
       >
-        <video controls className='video-player'>
-          <source src={Video1} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <video controls className='w-full h-full rounded-[5rem]' style={{ maxWidth: '80vw' }}>
+      <source src={Video1} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
       </motion.div>
 
 

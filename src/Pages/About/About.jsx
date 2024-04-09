@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion';
+
 import {
   Card,
   CardHeader,
@@ -20,39 +22,100 @@ import Director2 from '../../assets/Aboutpage/director2.png'
 import Director3 from '../../assets/Aboutpage/director3.png'
 import Director4 from '../../assets/Aboutpage/director4.jpeg'
 
-import './About.css'
 function About() {
   const [hovered, setHovered] = useState(false);
 
+
+  useEffect(() => {
+    document.title = 'About | Top Builders In Kochi'
+  }, [])
+
   return (
     <>
-      <div className='w-full mt-36 lg:mt-20 content visible'>
+      <motion.div className='w-full mt-36 lg:mt-20 '
+       initial={{
+        opacity: 0,
+        y: 50,
+
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+          delay: 0.5,
+        },
+      }}
+      >
         <p className='text-center text-2xl lg:text-3xl'>About</p>
         <p className='capitalize py-10 font-bold bg-gradient-to-r from-white to-gray-600  text-transparent bg-clip-text text-center text-4xl lg:text-7xl'>National Builders</p>
-      </div>
-      <div className='lg:h-[90vh] w-full mx-auto container mt-20 '>
+      </motion.div>
+      <motion.div className='w-full mx-auto container mt-20 '
+       initial={{
+        opacity: 0,
+        y: 50,
 
-        <div className='rounded-[1rem] lg:rounded-[3rem] h-full p-6 lg:p-10 bg-gray-900 lg:flex content visible'>
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+          delay: 0.5,
+        },
+      }}
+      >
+
+        <div className='rounded-[1rem] lg:rounded-[3rem] h-full p-6 lg:p-10 bg-gray-900 lg:flex'>
           <div className='hidden-div-after-tab  h-4/6'>
             <img src={Builing1} className='w-full h-full rounded-[2rem]' alt="" />
           </div>
-          <div className='bg-black w-full h-full rounded-[2rem] lg:rounded-s-[1rem] lgLrounded-b-[2rem] p-6 text-justify lg:p-14'>
+          <div className='bg-black w-full h-full rounded-[2rem] lg:rounded-none lg:rounded-s-[1rem] lg:rounded-b-[2rem] p-6 text-justify lg:p-14'>
             <p className='text-center lg:text-start text-2xl lg:text-6xl leading-tight bg-gradient-to-r from-white to-gray-600  text-transparent bg-clip-text ' style={{ wordSpacing: '0.2em' }}><span className='text-red-500'>Expression</span> of Excellent Living</p>
             <p className='pt-6 leading- text-justify text-xl opacity-65 z-1'>A visionary real estate development firm, National Builders specializes in pioneering architecturally distinct residential and mixed-use projects in India’s prime metropolitan markets of Navi Mumbai and Kerala.</p>
             <p className='pt-6 leading- text-justify text-xl opacity-65 z-1' > The firm has a proven track record of successful real estate development, consistently fulfilling its commitments and exceeding customer expectations. Its stamp of quality and delivery of best-in-class features is visible in each of the 135+ projects of National Builders – from the 6500-sq. ft. luxury homes in Vivant – the tallest tower in the satellite city of Navi Mumbai and the 3,000 sq. ft. Sky Villas in the 20-storeyed National Kingdom at Cochin, right to the 600 sq. ft. apartments in projects for home buyers with a select budget. From the premium addresses of Palm Beach Road in Navi Mumbai and Palarivattom in Cochin, to the emerging areas of New Panvel and NAINA region, the projects of National Builders dot prime locations in the two key markets. At National Builders, superiority in quality, culture of innovation and long-term sustainability are the key focus areas for operational excellence. The philosophy behind every National home is simple – live the values, and create genuine value for all stakeholders.</p>
           </div>
           <div className='hidden-div w-8/12 rounded-e-[1rem] h-5/6'>
-            <img src={Builing1} className='w-full h-full' alt="" />
+            <img src={Builing1} className='w-full h-full rounded-e-[1rem]' alt="" />
           </div>
         </div>
-      </div>
-      <div className='mx-auto p-5  container lg:my-20 text-xl text-justify content visible'>
+      </motion.div>
+
+      <motion.div className='mx-auto p-5  container lg:my-20 text-xl text-justify'
+       initial={{
+        opacity: 0,
+        y: 50,
+
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+          delay: 0.5,
+        },
+      }}
+      >
         <p className='my-4 opacity-65'>An eminent business leader and a real-estate pioneer, Founder-CMD M C Sunny’s leadership with nearly four decades of hands-on professional experience and a strong value system has built National Builders into one of the most reputed real-estate companies in Navi Mumbai and Kerala.</p>
         <p className='my-4 opacity-65'>This solid legacy of 35 years built on the twin-pillars of excellence and integrity has won the trust of customers around the globe. Today, National Builders enjoys a reputation that has made it a developer of choice for home buyers across the spectrum.</p>
         <p className='my-4 opacity-65'>The advantages of a family-office management structure and robust internal accruals enable National Builders to invest in quality that lasts for generations and yields smart returns on investments for the home buyers.</p>
-      </div>
+      </motion.div>
 
-      <div className='bg-20212D content visible'>
+      <motion.div className='bg-20212D '
+       initial={{
+        opacity: 0,
+        y: 50,
+
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+          delay: 0.5,
+        },
+      }}
+      >
         <div className='grid h-full pb-10 lg:pb-20 gap-10 lg:grid-rows-[16rem,6rem,1fr,1fr] mx-auto container'>
           <div className='flex mt-10 lg:mt-6 justify-center lg:justify-start items-center'>
             <img src={Round} className='w-1/6 lg:w-32' alt="" />
@@ -95,8 +158,22 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
-      <div className='mx-auto container content visible'>
+      </motion.div>
+      <motion.div className='mx-auto container'
+       initial={{
+        opacity: 0,
+        y: 50,
+
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+          delay: 0.5,
+        },
+      }}
+      >
         <div className='flex py-10 lg:py-20 justify-center lg:justify-start items-center'>
           <img src={Round} className='w-1/6 lg:w-32' alt="" />
           <p className='ps-7 text-2xl lg:text-5xl'><span className='text-red-500'>Mission</span> & <span className='bg-gradient-to-r from-white to-gray-600  text-transparent bg-clip-text'>Vision</span></p>
@@ -223,9 +300,23 @@ function About() {
           </Card>
         </div>
 
-      </div>
+      </motion.div>
 
-      <div className='bg-252630 mt-20 content visible '>
+      <motion.div className='bg-252630 mt-20 '
+       initial={{
+        opacity: 0,
+        y: 50,
+
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+          delay: 0.5,
+        },
+      }}
+      >
         <div className='mx-auto container lg:flex h-full p-4 lg:p-10 w-full'>
           <Card className='bg-gray-900 h-full my-8 lg:my-0  me-10 w-full'>
             <img className='rounded-lg' src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="" />
@@ -236,8 +327,22 @@ function About() {
             <p className='text-center py-5 text-xl font-bold text-white'>Our <span className='text-red-500'>Mumbai</span> Office</p>
           </Card>
         </div>
-      </div>
-      <div className='mx-auto mt-20 container lg:grid lg:grid-cols-[1fr,16rem] gap-10'>
+      </motion.div>
+      <motion.div className='mx-auto my-20 container lg:grid lg:grid-cols-[1fr,16rem] gap-10'
+       initial={{
+        opacity: 0,
+        y: 50,
+
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.5,
+          delay: 0.5,
+        },
+      }}
+      >
         <div>
           <p className='text-center lg:text-start mx-10 lg:mx-0 text-3xl lg:font-bold'>Find your dream <span className='lg:bg-gradient-to-r lg:from-white lg:to-gray-600  lg:text-transparent lg:bg-clip-text'>home today</span></p>
           <p className='pt-5 mx-3 lg:mx-0 text-justify text-xl opacity-65 '>Lorem ipsum dolor sit amet consectetur. Tellus lobortis massa viverra sapien tincidunt turpis quam. Dictum elementum adipiscing nec urna id fames mauris ut mauris. Vitae luctus augue auctor nascetur tempus ullamcorper cras at. Commodo est donec purus est tempus sollicitudin. Dictum gravida duis egestas.</p>
@@ -255,7 +360,7 @@ function About() {
           </button>
 
         </div>
-      </div>
+      </motion.div>
     </>
   )
 }
