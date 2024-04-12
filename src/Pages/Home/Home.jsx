@@ -198,7 +198,7 @@ function Home() {
         },
       }}
       >
-        {/* <ReviewCarousel /> */}
+        <ReviewCarousel />
       </motion.div>
       {/* Review View End */}
       {/* News & BlogsCarousel View Start */}
@@ -219,7 +219,7 @@ function Home() {
           </button>
         </div>
         <div className='ms-36'>
-          {/* <NewsBlogsCarousel /> */}
+          <NewsBlogsCarousel />
         </div>
       </div>
       {/* News & BlogsCarousel View End */}

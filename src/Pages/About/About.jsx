@@ -179,7 +179,7 @@ function About() {
           <p className='ps-7 text-2xl lg:text-5xl'><span className='text-red-500'>Mission</span> & <span className='bg-gradient-to-r from-white to-gray-600  text-transparent bg-clip-text'>Vision</span></p>
         </div>
         <div>
-          <p className='text-xl mx-5 lg:mx-0 text-justify opacity-65'>Lorem ipsum dolor sit amet consectetur. Tellus lobortis massa viverra sapien tincidunt turpis quam. Dictum elementum adipiscing nec urna id fames mauris ut mauris. Vitae luctus augue auctor nascetur tempus ullamcorper cras at. Commodo est donec purus est tempus sollicitudin. Dictum gravida duis egestas.</p>
+          <p className='text-xl lg:mb-10 mx-5 lg:mx-0 text-justify opacity-65'>At National Builders, we have always taken care to pick the best location with ease of accessibility and assured appreciation. The perfect locations make our project truly well connected. All our projects are located at the heart of the city which gives residents access to the most happening lifestyle hubs, the finest hotels, luxury retail stores, premium entertainment centres and major hotspots of work.</p>
         </div>
         <div className='lg:flex right-auto left-auto pt-10 lg:pt-0 '>
           <Card className="mt-6 lg:w-96 bg-gray-900 lg:me-4 hover:shadow-gray-600 hover:shadow-xl">
@@ -345,7 +345,7 @@ function About() {
       >
         <div>
           <p className='text-center lg:text-start mx-10 lg:mx-0 text-3xl lg:font-bold'>Find your dream <span className='lg:bg-gradient-to-r lg:from-white lg:to-gray-600  lg:text-transparent lg:bg-clip-text'>home today</span></p>
-          <p className='pt-5 mx-3 lg:mx-0 text-justify text-xl opacity-65 '>Lorem ipsum dolor sit amet consectetur. Tellus lobortis massa viverra sapien tincidunt turpis quam. Dictum elementum adipiscing nec urna id fames mauris ut mauris. Vitae luctus augue auctor nascetur tempus ullamcorper cras at. Commodo est donec purus est tempus sollicitudin. Dictum gravida duis egestas.</p>
+          <p className='pt-5 mx-3 lg:mx-0 text-justify text-xl opacity-65 '>A dedicated homecare department is at service 24/7 to cater to all the needs of the customer. From choosing the perfect house, doing all the paperwork and handing over your keys, our Homecare will assist you. We have a dedicated after-sales and asset management team to attend to all repair and maintenance work.</p>
         </div>
         <div className='flex justify-center mt-6 items-center'>
           <button className='bg-343894 hover:bg-white hover:text-red-500 lg:text-xl rounded-full flex p-3 lg:p-4'
