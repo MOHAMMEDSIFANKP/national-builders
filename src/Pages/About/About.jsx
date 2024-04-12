@@ -139,7 +139,7 @@ function About() {
           <div className='lg:flex'>
             <div className='flex justify-center items-center '>
               <div className='mt-5 lg:mt-0 hidden-div'>
-                <p className='ms-10 bg-gradient-to-r from-white to-gray-600  text-transparent bg-clip-text text-2xl font-bold'>Mission</p>
+                <p className='ms-10 bg-gradient-to-r from-white to-gray-600  text-transparent bg-clip-text text-2xl font-bold'>Vision</p>
                 <p className='ms-10 pt-5 text-white opacity-65 text-xl'>Building quality urban spaces with integrity and innovation that inspires generations</p>
               </div>
             </div>
@@ -152,7 +152,7 @@ function About() {
             </div>
             <div className='flex justify-center items-center '>
               <div className='mt-5 lg:mt-0 hidden-div-after-tab'>
-                <p className='ms-10 bg-gradient-to-r from-white to-gray-600  text-transparent bg-clip-text text-2xl font-bold'>Mission</p>
+                <p className='ms-10 bg-gradient-to-r from-white to-gray-600  text-transparent bg-clip-text text-2xl font-bold'>Vision</p>
                 <p className='ms-10 pt-5 text-white opacity-65 text-xl'>Building quality urban spaces with integrity and innovation that inspires generations</p>
               </div>
             </div>

@@ -18,30 +18,34 @@ function Ourpresence() {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const totalScroll = document.documentElement.scrollHeight - window.innerHeight - window.innerWidth - window.innerWidth;
-            const totalScroll2 = document.documentElement.scrollHeight - window.innerHeight - window.innerWidth;
+            const totalScroll2 = document.documentElement.scrollHeight - window.innerHeight - window.innerWidth- window.innerWidth;
             const progress = scrollTop / totalScroll;
             const progress2 = scrollTop / totalScroll2;
-
-            if (progress > scrollProgress) {
-                setShouldDraw(true);
-                setScrollProgress(progress);
-            } else {
-                setScrollProgress(progress2);
-            }
+    
+            const shouldDrawNow = progress > scrollProgress;
+    
+            setShouldDraw(shouldDrawNow);
+            setScrollProgress(shouldDrawNow ? progress : progress2);
         };
-
+    
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+    
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, [scrollProgress]);
-
+    
     useEffect(() => {
         if (shouldDraw) {
             svgAnimationControls.start({
                 pathLength: scrollProgress,
-                transition: { duration: 1.0 }
+                transition: { duration: 1 } 
             });
         } else {
-            svgAnimationControls.start({ pathLength: 0});
+            svgAnimationControls.start({
+                pathLength:0,
+                transition: { duration: 2 } 
+            });
         }
     }, [shouldDraw, scrollProgress, svgAnimationControls]);
     return (
@@ -71,7 +75,7 @@ function Ourpresence() {
                 </motion.div>
                 {/* Bg images main div */}
                 <div className='hidden lg:block'>
-                    <div className='grid grid-rows-4  px-20 w-full  -mb-[140rem] gap-[9rem]'>
+                    <div className='grid grid-rows-4  px-20 w-full  -mb-[138rem] gap-[16rem]'>
                         <motion.div className='flex'
                             initial={{
                                 opacity: 0,
@@ -88,7 +92,7 @@ function Ourpresence() {
                         >
                             <div className='w-full'></div>
                             <div className='w-5/6 '>
-                                <p className='text-9xl opacity-65 font-bold italic heding-font'>Mumbai</p>
+                                <p className='text-7xl opacity-65 font-bold italic heding-font'>Mumbai</p>
                                 <p className='text-lg  opacity-65 text-justify leading-8'>In Mumbai, National Builders offers premium building solutions. Rent or buy, we cater to your needs and budget. With over 50 completed projects, trust us to deliver excellence. Make your dreams a reality with National Builders.</p>
 
                                 <div className='flex justify-end w-full  items-center  pt-5'>
@@ -120,7 +124,7 @@ function Ourpresence() {
                             }}
                         >
                             <div className='w-5/6'>
-                                <p className='text-9xl opacity-65 font-bold italic heding-font'>Thane</p>
+                                <p className='text-7xl opacity-65 font-bold italic heding-font'>Thane</p>
                                 <p className='text-lg  opacity-65 text-justify leading-8'>National Builders, serving the dynamic locale of Thane, presents tailored building solutions. Whether you're in search of rentals or purchases, we accommodate your needs and budget. With our expertise, we've successfully executed 20 landmark projects in Thane. Entrust National Builders to transform your aspirations into architectural marvels.</p>
 
                                 <div className='flex justify-end w-full  items-center  pt-5'>
@@ -154,8 +158,8 @@ function Ourpresence() {
                             }}
                         >
                             <div className='w-full'></div>
-                            <div className='w-5/6 mt-14'>
-                                <p className='text-9xl opacity-65 font-bold italic heding-font'>Kochi</p>
+                            <div className='w-5/6 mt-6'>
+                                <p className=' text-7xl opacity-65 font-bold italic heding-font'>Kochi</p>
                                 <p className='text-lg  opacity-65 text-justify leading-8'>Discover National Builders, your premier partner in Kochi's thriving landscape. Offering bespoke building solutions, we cater to your every requirement and budget. With an impressive track record, we've completed 40 prestigious projects in Kochi. Choose National Builders and witness your dreams materialize into magnificent realities.</p>
 
                                 <div className='flex justify-end w-full  items-center  pt-5'>
@@ -186,7 +190,7 @@ function Ourpresence() {
                                 },
                             }}>
                             <div className='w-5/6 '>
-                                <p className='text-9xl opacity-65 font-bold italic heding-font'>Thiruvalla</p>
+                                <p className='text-7xl opacity-65 font-bold italic heding-font'>Thiruvalla</p>
                                 <p className='text-lg  opacity-65 text-justify leading-8'>Introducing National Builders, your trusted ally in the charming locale of Thiruvalla. Specializing in tailor-made building solutions, we cater to diverse needs and budgets. With a rich history of accomplishments, we've successfully delivered 15 esteemed projects in Thiruvalla. Choose National Builders and watch your visions come to life    .</p>
 
                                 <div className='flex justify-end w-full  items-center  pt-5'>
