@@ -18,7 +18,7 @@ import Director1 from '../../assets/Aboutpage/director1.png'
 import Director2 from '../../assets/Aboutpage/director2.png'
 import Director3 from '../../assets/Aboutpage/director3.png'
 import Director4 from '../../assets/Aboutpage/director4.jpeg'
-import MumbaiBranch from '../../assets/Aboutpage/mumbaibranch.jpg'
+import MumbaiBranch from '../../assets/Aboutpage/mumbaibranch.png'
 import KochiBranch from '../../assets/Aboutpage/kochibranch.jpg'
 
 
