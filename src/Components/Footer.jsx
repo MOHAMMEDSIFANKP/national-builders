@@ -1,6 +1,7 @@
 import React from 'react'
-import BgImage from '../assets/Footer/bgimage.svg'
 import Logo from '../assets/Logo/Logo.png'
+import BgImage from '../assets/Footer/bgimage.svg'
+import Accolades_logo from '../assets/Footer/national_builders.svg'
 import { Card } from '@material-tailwind/react'
 
 import { IoLocationSharp } from "react-icons/io5";
@@ -14,18 +15,18 @@ import { MdCopyright } from "react-icons/md";
 
 function Footer() {
   return (
-    <div className='lg:h-screen bg-black grid grid-rows-[10rem,1px,1fr]'>
+    <section className=' bg-black grid grid-rows-[10rem,1px,1fr]'>
     <div className='flex justify-center items-center'>
       <img src={Logo} className='w-56 ' alt="" />
     </div>
     <hr className='mx-auto container border border-gray-900' />
    <div className=' bg-no-repeat bg-cover' style={{ backgroundImage: `url(${BgImage})` }}>
-   <div className='mx-auto container grid lg:grid-rows-[1fr,6rem,12rem] '>
-      <div className='lg:grid lg:grid-cols-[1fr,5rem,1fr] gap-8'>
-        <Card className='bg-gray-900 bg-opacity-50 border grid grid-cols-[3rem,1fr] lg:grid-cols-[5rem,1fr] border-gray-800 my-10  rounded-[2rem]'>
-          <div className='text-red-500 ps-3 lg:ps-7'>
-            <IoLocationSharp className='h-7 w-7 mt-[7rem]' />
-            <MdEmail className='h-6 w-6 mt-[7.5rem] md:mt-[2.5rem]  lg:mt-[5.3rem]' />
+   <div className='mx-auto container grid grid-rows-[1fr,6rem,12rem] '>
+      <div className='grid grid-cols-[1fr,5rem,1fr] gap-8'>
+        <Card className='bg-gray-900 bg-opacity-50 border grid grid-cols-[5rem,1fr] border-gray-800 my-10  rounded-[2rem]'>
+          <div className='text-red-500 ps-7'>
+            <IoLocationSharp className='h-7 w-7 mt-[6rem]' />
+            <MdEmail className='h-6 w-6 mt-[5.3rem]' />
             <FaPhoneAlt className='h-6 w-6 mt-[2rem]' />
 
           </div>
@@ -47,7 +48,7 @@ function Footer() {
 
         <Card className='bg-gray-900 bg-opacity-50 border grid grid-cols-[3rem,1fr] lg:grid-cols-[5rem,1fr] border-gray-800 my-10 rounded-[2rem]'>
         <div className='text-red-500 ps-3 lg:ps-7 pb-10 lg:pb-0'>
-            <IoLocationSharp className='h-7 w-7 mt-[7rem]' />
+            <IoLocationSharp className='h-7 w-7 mt-[6rem]' />
             <MdEmail className='h-6 w-6 mt-[4rem] md:mt-[2rem] lg:mt-[4rem] ' />
             <FaPhoneAlt className='h-6 w-6 mt-[2rem] md:mt-[1.2rem] lg:mt-[2rem]' />
 
@@ -61,26 +62,27 @@ function Footer() {
 
         </Card>
       </div>
-      <Card className='rounded-[2rem] py-4 lg:py-0 lg:grid lg:grid-cols-[1fr,1fr,1fr,1fr,1fr,1fr,9rem,1fr,1fr] pe-8 bg-opacity-50 text-white font-bold lg:text-xl bg-gray-900 border border-gray-800'>
-        <p className='flex justify-center items-center'>Home</p>
-        <p className='flex justify-center items-center'>Projects</p>
-        <p className='flex justify-center items-center'>Rentals</p>
-        <p className='flex justify-center items-center'>About</p>
-        <p className='flex justify-center items-center'>Contact</p>
-        <p className='flex justify-center items-center'>Testimonials</p>
-        <p className='flex justify-center items-center'>News & Events</p>
-        <p className='flex justify-center items-center'>Blogs</p>
-        <p className='flex justify-center items-center'>Key handover</p>
+      <Card className='rounded-[2rem] flex-row justify-between items-center px-10 py-4 lg:py-0 bg-opacity-50 text-white font-bold lg:text-xl bg-gray-900 border border-gray-800'>
+        <p>Home</p>
+        <p>Projects</p>
+        <p>Rentals</p>
+        <p>About</p>
+        <p>Contact</p>
+        <p>Testimonials</p>
+        <p>News & Events</p>
+        <p>Blogs</p>
+        <p>Key handover</p>
       </Card>
-      <Card className='rounded-[2rem] lg:h-20 mt-10 lg:grid lg:grid-cols-3 py-3 text-white mb-10 lg:mb-0 lg:text-xl bg-gray-900 bg-opacity-50 border border-gray-900'>
+      <Card className='flex-row justify-between items-center px-20 rounded-[2rem] lg:h-20 mt-10  text-white mb-10 lg:mb-0 lg:text-xl bg-gray-900 bg-opacity-50 border border-gray-800'>
         <p className='flex justify-center items-center '><MdCopyright className='w-6 h-6' /> National Builders All Rights Reseved
         </p>
-        <p className='flex justify-center items-center'>ACCOLADES Integrated</p>
-        <p className='flex justify-center items-center'>Privacy | Terms of Service</p>
+        {/* <p className='flex justify-center items-center'>ACCOLADES Integrated</p> */}
+        <img src={Accolades_logo} alt="" />
+        <p className='flex justify-center items-center'>Privacy Policy | Terms of Service</p>
       </Card>
     </div>
    </div>
-  </div>
+  </section>
   )
 }
 

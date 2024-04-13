@@ -3,11 +3,8 @@ import { motion } from 'framer-motion';
 
 import {
   Card,
-  CardHeader,
   CardBody,
-  CardFooter,
   Typography,
-  Button,
 } from "@material-tailwind/react";
 
 import { GoArrowUpRight } from "react-icons/go";
@@ -21,6 +18,9 @@ import Director1 from '../../assets/Aboutpage/director1.png'
 import Director2 from '../../assets/Aboutpage/director2.png'
 import Director3 from '../../assets/Aboutpage/director3.png'
 import Director4 from '../../assets/Aboutpage/director4.jpeg'
+import MumbaiBranch from '../../assets/Aboutpage/mumbaibranch.jpg'
+import KochiBranch from '../../assets/Aboutpage/kochibranch.jpg'
+
 
 function About() {
   const [hovered, setHovered] = useState(false);
@@ -317,14 +317,14 @@ function About() {
         },
       }}
       >
-        <div className='mx-auto container lg:flex h-full p-4 lg:p-10 w-full'>
+        <div className='mx-auto container lg:flex p-4 lg:p-10 w-full'>
           <Card className='bg-gray-900 h-full my-8 lg:my-0  me-10 w-full'>
-            <img className='rounded-lg' src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="" />
+            <img className='rounded-lg ' src={MumbaiBranch} alt="" />
             <p className='text-center py-5 text-xl font-bold text-white'>Our <span className='text-red-500'>Mumbai</span> Office</p>
           </Card>
           <Card className='bg-gray-900 h-full my-8 lg:my-0  w-full lg:me-10'>
-            <img className='rounded-lg' src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="" />
-            <p className='text-center py-5 text-xl font-bold text-white'>Our <span className='text-red-500'>Mumbai</span> Office</p>
+            <img className='rounded-lg ' src={KochiBranch} alt="" />
+            <p className='text-center py-5  text-xl font-bold text-white'>Our <span className='text-red-500'>Kochi</span> Office</p>
           </Card>
         </div>
       </motion.div>
