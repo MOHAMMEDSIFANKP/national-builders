@@ -117,7 +117,7 @@ function NavBar() {
           <MenuItem className='my-1'>Testimontials</MenuItem>
           <MenuItem className='my-1'>Blogs</MenuItem>
        <MenuItem className='my-1' onClick={()=>navigate('/about')}>About</MenuItem>
-          <MenuItem className='my-1'>Contact</MenuItem>
+          <MenuItem className='my-1' onClick={()=>navigate('/contact')}>Contact</MenuItem>
         </MenuList>
       </Menu>
 
@@ -185,7 +185,7 @@ function NavBar() {
                   <MenuItem className='my-1'>Testimontials</MenuItem>
                   <MenuItem className='my-1'>Blogs</MenuItem>
                   <MenuItem className='my-1' onClick={()=>navigate('/about')}>About</MenuItem>
-                  <MenuItem className='my-1'>Contact</MenuItem>
+                  <MenuItem className='my-1' onClick={()=>navigate('/contact')}>Contact</MenuItem>
                 </MenuList>
               </Menu>
             </div>

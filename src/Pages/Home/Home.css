@@ -6,22 +6,14 @@
   
 }
 
+.player-wrapper {
+  height:  77vh;
 
-/* Apply animations to line containers */
-.line-container {
-  margin-top: 2rem; /* Adjust as needed */
 }
 
-.line-container + .content {
-  animation-name: fadeOut;
-  animation-duration: 1s;
-  animation-delay: 0.7s; /* Delay to start after content fade-in */
+.react-player {
+  border-radius: 10rem !important;
+  height: 100% !important;
+  width: 100% !important;
+ 
 }
-
-.video-player {
-  width: 100%;
-  max-width: 100%;
-  border-radius: 2rem; 
-}
-
-

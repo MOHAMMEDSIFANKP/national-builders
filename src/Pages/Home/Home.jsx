@@ -21,53 +21,40 @@ import { GoArrowRight } from "react-icons/go";
 import ReviewCarousel from '../../Components/Carousel/ReviewCarousel'
 import NewsBlogsCarousel from '../../Components/Carousel/NewsBlogsCarousel'
 import Ourpresence from '../../Components/Ourpresence/Ourpresence'
+import ReactPlayer from 'react-player';
+
+import './Home.css'
 function Home() {
   const [hovered, setHovered] = useState(false);
 
+  const animationConfig = {
+    initial: {
+      opacity: 0,
+      y: 50,
+    },
+    whileInView: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.5,
+      },
+    },
+  };
 
   useEffect(() => {
-    document.title = 'Home | Top Builders In Kochi'
+    document.title = 'Top Builders In Kochi | Best builders in Kochi | National Builders'
   }, [])
-
-
 
   return (
     <>
       {/* Background images and Text stat */}
-      <motion.div className='-mt-36 lg:-mt-10 h-screen bg-cover bg-center flex justify-center items-center  ' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(${bgImge1})` }}
-        initial={{
-          opacity: 0,
-          y: 50,
-
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.5,
-            delay: 0.5,
-          },
-        }}
-      >
+      <motion.div className='-mt-36 lg:-mt-10 h-screen bg-cover bg-center flex justify-center items-center  ' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(${bgImge1})` }} {...animationConfig}>
         <p className='capitalize mx-10 lg:ms-0 text-4xl md:text-6xl -mt-28 bg-gradient-to-r from-white to-gray-600 inline-block text-transparent bg-clip-text' >Expression Of Excellent Living</p>
       </motion.div>
       {/* Background images and Text End */}
-      <motion.div className='w-full mx-auto container grid grid-rows-[1fr,16rem]'
-       initial={{
-        opacity: 0,
-        y: 50,
-
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 0.5,
-          delay: 0.5,
-        },
-      }}
-      >
-        <div className='flex flex-col lg:flex-row lg:items-start pt-36 py-10 mx-4 lg:mx-0'>
+      <div className='w-full mx-auto container grid grid-rows-[1fr,16rem]'>
+        <motion.div className='flex flex-col lg:flex-row lg:items-start pt-36 py-10 mx-4 lg:mx-0' {...animationConfig}>
           <div className='w-full lg:w-8/12 text-white text-2xl md:text-4xl lg:text-6xl mb-5 lg:mb-0 -mt-16 lg:mt-0'>
             <div className='invisible lg:visible h-0 lg:h-full'>
               {/* For Laptop View */}
@@ -88,7 +75,8 @@ function Home() {
               <p class='leading-8' style={{ wordSpacing: '0.3em' }}>A visionary real estate development firm, National Builders specializes in pioneering architecturally distinct residential and mixed-use projects in India's prime metropolitan markets of Navi Mumbai and Kerala.</p>
               <p class='leading-8 mt-5 text-justify' style={{ wordSpacing: '0.3em' }}>The firm has a proven track record of successful real estate development, consistently fulfilling its commitments and exceeding customer expectations. Its stamp of quality and delivery of best-in-class features are visible in each of the 135+ projects of National Builders.</p>
             </div>
-            <button className='bg-343894 invisible lg:visible h-0 lg:h-full mt-14 hover:bg-white hover:text-red-500 text-xl rounded-full flex p-4'
+            <motion.button className='bg-343894 invisible lg:visible h-0 lg:h-full mt-14 hover:bg-white hover:text-red-500 text-xl rounded-full flex p-4'
+              whileHover={{ scale: 1.1 }}
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
             >
@@ -97,10 +85,10 @@ function Home() {
               ) : (
                 <GoArrowUpRight className={`ms-2 lg:ms-4 p-1 h-7 md:h-8 w-7 md:w-8 bg-red-500 rounded-full icon-transition`} />
               )}
-            </button>
+            </motion.button>
           </div>
-        </div>
-        <div className='grid grid-cols-2 lg:grid-cols-4 w-full -mt-16 lg:mt-0'>
+        </motion.div>
+        <motion.div className='grid grid-cols-2 lg:grid-cols-4 w-full -mt-16 lg:mt-0' {...animationConfig}>
           <div className='my-auto mx-auto text-center'>
             <p className='text-6xl my-4'>5</p>
             <p className='opacity-[0.5] text-xl'>Launched</p>
@@ -117,24 +105,10 @@ function Home() {
             <p className='text-6xl my-4'>4</p>
             <p className='opacity-[0.5] text-xl'>Ongoing</p>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
       {/* Awards & Recognitions also images view started */}
-      <motion.div className='pt-20 py-56 mx-auto container'
-       initial={{
-        opacity: 0,
-        y: 50,
-
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 0.5,
-          delay: 0.5,
-        },
-      }}
-      >
+      <motion.div className='pt-20 py-56 mx-auto container' {...animationConfig}>
         <div className='flex justify-center items-center text-center text-3xl lg:text-6xl'>
           <p><span className='text-red-500'>Awards</span> and <span style={{
             backgroundImage: 'linear-gradient(to right, white, #64748b)',
@@ -156,58 +130,34 @@ function Home() {
       <Ourpresence />
 
       {/* Video div start */}
-      <motion.div className='h-screen mx-auto container mt-64 '
-       initial={{
-        opacity: 0,
-        y: 50,
-
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 0.5,
-          delay: 0.5,
-        },
-      }}
-      >
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-    <video controls className='w-full h-full rounded-[5rem]' style={{ maxWidth: '80vw' }}>
-      <source src={Video1} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
+      <motion.div className='h-screen mx-auto container mt-64 ' {...animationConfig}>
+        <div className=' player-wrapper' >
+          <ReactPlayer
+            className=' react-player'
+            url={'https://youtu.be/eLVPHOTvHxM?si=7odRvMi1rKmob8YT'}
+            playing={true}
+            playsinline
+            muted
+          />
+        </div>
       </motion.div>
 
 
       {/* Video div End */}
 
       {/* Review View Start */}
-      <motion.div className='h-screen'
-       initial={{
-        opacity: 0,
-        y: 50,
-
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 0.5,
-          delay: 0.5,
-        },
-      }}
-      >
-        <ReviewCarousel />
-      </motion.div>
+      <div className='h-screen'>
+        <ReviewCarousel animationConfig={animationConfig} />
+      </div>
       {/* Review View End */}
       {/* News & BlogsCarousel View Start */}
       <div className='h-screen bg-gradient-to-r from-gray-900 to-gray-600'>
-        <div className='flex h-2/6 justify-around items-center'>
+        <motion.div className='flex h-2/6 justify-around items-center'{...animationConfig}>
           <div className='flex justify-center items-center gap-11'>
             <img src={Round} alt="" /><p className='text-5xl  font-thin'>New & Blogs</p>
           </div>
-          <button className='bg-343894  hover:bg-white hover:text-red-500 text-xl rounded-full flex p-4'
+          <motion.button className='bg-343894  hover:bg-white hover:text-red-500 text-xl rounded-full flex p-4'
+            whileHover={{ scale: 1.1 }}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
@@ -216,11 +166,11 @@ function Home() {
             ) : (
               <GoArrowUpRight className={`ms-2 lg:ms-4 p-1 h-7 md:h-8 w-7 md:w-8 bg-red-500 rounded-full icon-transition`} />
             )}
-          </button>
-        </div>
-        <div className='ms-36'>
+          </motion.button>
+        </motion.div>
+        <motion.div className='ms-36' {...animationConfig}>
           <NewsBlogsCarousel />
-        </div>
+        </motion.div>
       </div>
       {/* News & BlogsCarousel View End */}
     </>
